@@ -1,0 +1,46 @@
+* {
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 100;
+}
+
+.modal-content {
+    height: 321px;
+    width: 331px;
+    margin-left: 32px;
+    margin-top: 51px;
+}
+.modal-header {
+    background: #18bc9c;
+}
+
+.btn.btn-default {
+    background: #18bc9c;
+    color: white;
+}
+input#btn-login {
+    background: #18bc9c;
+    color: white;
+}
+
+.labourUl li {
+    border-bottom: 1px solid #2c3e50;
+}
+
+.labourUl{
+    border: 2px solid #efefef;
+    padding: 31px;
+    height: 300px;
+    overflow: auto;
+}
+
+.searchMap{
+    z-index: 0;
+    position: absolute;
+    left: 119px;
+    top: 0px;
+    width: 71%;
+    height: 37px;
+    margin-top: 9px;
+    border-radius: initial;
+}
