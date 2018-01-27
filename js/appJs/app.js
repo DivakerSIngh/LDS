@@ -1,13 +1,13 @@
-﻿var mainApp = angular.module("mainApp", ['ngRoute','ngCookies','blockUI']);
+﻿var mainApp = angular.module("mainApp", ['ngRoute','cgNotify','ngCookies','blockUI']);
 
 function getRoute(name) {
-    debugger
+    
     return {
         templateUrl: 'src/view/' + name + '.html?r=' + appVer,
         controller: name + 'Ctrl',
         resolve: {
             load: function ($q, $route, $rootScope) {
-                debugger
+                
                 var deferred = $q.defer();
                 $script(['src/controller/' + name + 'Ctrl.js?r=' + appVer], function () { 
                     $rootScope.$apply(function () { deferred.resolve(); });
@@ -18,12 +18,18 @@ function getRoute(name) {
     }
 }
 mainApp.config(function ($routeProvider, $controllerProvider, $locationProvider) {
-    debugger
+    
     mainApp.registerCtrl = $controllerProvider.register;
     $routeProvider
      .when('/home', getRoute('home'))
-     .when('/search', getRoute('search'))     
+     .when('/search', getRoute('search'))    
+     .when('/category', getRoute('category'))    
+     .when('/about', getRoute('about'))    
+     .when('/contact', getRoute('contact')) 
+     .when('/signup', getRoute('signup'))  
+     .when('/workerdetails', getRoute('workerdetails'))      
      .otherwise({ redirectTo: '/home' });
+     
 
     $locationProvider.html5Mode({
         enabled: true,
@@ -34,7 +40,7 @@ mainApp.config(function ($routeProvider, $controllerProvider, $locationProvider)
 mainApp.service('appServices', appServices);
 
 mainApp.run(function ($rootScope, $location, $cookies, $http, appServices) {
-    debugger
+    
     var token = $cookies.get('userAuthToken');
     if (token) $rootScope.token = token;
     else $rootScope.token = null;
@@ -69,14 +75,7 @@ mainApp.run(function ($rootScope, $location, $cookies, $http, appServices) {
                 }
             }
         }
-        appServices.getBulkData().then(function (d) {
-            $rootScope.BulkData = d.Result;
-        });
-
-        appServices.doActionget('', 'Master/GetConstants').then(function (d) {
-            if (d.Error == null) { $rootScope.Constants = d.Result; }
-            else { $rootScope.setMsg(d.Error); }
-        });
+      
     });
 
     //let everthing know that we need to save state now.
@@ -85,8 +84,9 @@ mainApp.run(function ($rootScope, $location, $cookies, $http, appServices) {
     };
 })
 
-function mainCtrl($scope, $location, $rootScope, $cookies, $http, $timeout, appServices) {
+function mainCtrl($scope, $location, $rootScope,notify, $cookies, $http, $timeout, appServices) {
     $rootScope._baseURL = "";
+    $rootScope.pageClass = 'page-home';
     $rootScope._baseUrlServer = "";
     $rootScope.mUser = null;
     $rootScope.files = {};
@@ -94,11 +94,11 @@ function mainCtrl($scope, $location, $rootScope, $cookies, $http, $timeout, appS
 
     $scope.addToken = function (str) { return { Search: str, Token: $rootScope.token }; }
 
-    // $rootScope.setMsg = function (msg, succ) {
-    //     debugger
-    //     notify.closeAll();
-    //    notify({ message: msg, classes: (succ ? "alert-success" : "alert-danger"), duration: 50000000 });
-    // }
+    $rootScope.setMsg = function (msg, succ) {
+        debugger
+        notify.closeAll();
+       notify({ message: msg, classes: (succ ? "alert-success" : "alert-danger"), duration: 50000000 });
+    }
     // $rootScope.goSignin = function (url) {
     //     if (url && url.indexOf('SignIn.html') < 0) {
     //         $location.path("/SignIn");
@@ -117,9 +117,11 @@ function mainCtrl($scope, $location, $rootScope, $cookies, $http, $timeout, appS
         // $http.defaults.headers.common['Auth-Token'] = $rootScope.token;
         // $location.path("/signIn");
     };
-
+    $scope.getClass = function (path) {
+        return ($location.path().substr(0, path.length) === path) ? 'activeMenu' : '';
+      }
     $rootScope.goToLocation = function (path) {
-        debugger
+        
         $location.path(path);
     };
 

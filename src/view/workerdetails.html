@@ -1,0 +1,89 @@
+<section id="contact">
+        <div class="containers">
+          <h2 class="text-center text-uppercase text-secondary mb-0">Worker Deatils</h2>
+          <hr class="star-dark mb-5">
+          <div class="row">
+  <div class="detail-form-wrap">
+        <div class="row max-width">
+            <div class="displaypic col-xs-12 col-sm-12">
+                  <div class="profile-pic">
+                         
+                          <span class="profilepicthumbnail"> <img [src]="eventDom.eventImage" width="98px"/></span>
+                      </div>
+                      <div class="profile-address">
+                          <span class="user-name"></span>
+                          <div class="reviews clearfix">
+                              
+                          </div>
+                      </div>
+  
+  
+                <!-- <div class="profile-pic">
+                  <img [src] ="user?.profile_pic"/>
+                   <span class="profilepicthumbnail"> <img src="../assets/images/msg-user-pic.jpg"></span>
+                </div> -->
+                <div class="profile-address">
+                    <span class="user-name"></span>
+                    <div class="reviews clearfix">
+                        <!-- <span class="score"><span></span></span> <span class="rating-count"></span> -->
+                      
+                         <div class="view_docs">
+                            <!-- <a >View Docs <i class="fa fa-check-square-o"></i></a> -->
+                            <button class="custom-btn" id="btnChangeStatus" data-target="#collapseExample" *ngIf="eventDom.status=='Pending'" (click)="openConfirmationDialog(eventDom,'Approved')" data-toggle="collapse" type="button">Change Status</button>
+                            <button class="custom-btn" id="btnChangeStatus" data-target="#collapseExample"  *ngIf="eventDom.status=='!Pending'"  data-toggle="collapse" type="button">Change Status</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="user-details-wrapper col-xs-12 col-sm-12">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <span class="k-val">Event Name</span>
+                        <span class="a-val">asdasd</span>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <span class="k-val">Event Type</span>
+                        <span class="a-val"></span>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <span class="k-val">Added By</span>
+                        <div ><span class="a-val"> </span> </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <span class="k-val">Location</span>
+                        <span class="a-val"></span>
+                    </div>
+                </div>
+    
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <span class="k-val">Status</span>
+                        <span class="a-val"></span>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <span class="k-val">Date & Time</span>
+                              <span class="eventstart"></span>
+                              - <span class="eventend"></span>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="form-group">
+                        <span class="k-val">Description</span>
+                        <span class="a-val"></span>
+                    </div>
+                </div>
+                
+        </div>
+    </div>
+
+</div>
+        </div></section>
