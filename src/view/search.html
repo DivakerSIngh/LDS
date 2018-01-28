@@ -1,51 +1,218 @@
 <section class="portfolio" id="portfolio">
-        <div class="container">
-          <h2 class="text-center text-uppercase text-secondary mb-0">Search Category</h2>
-          <hr class="star-dark mb-5">
-          <div class="row">
-            <div class="col-sm-9 mx-auto">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Search Category</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+            <div class="col-sm-12 mx-auto">
                 <input id="searchInput" required class="form-control searchMap" type="text" placeholder="Enter a location">
-                <div class="map" id="map" style="width: 100%;height: 476px;;"></div>
+                <div class="map" id="map" style="width: 100%;
+                height: 244px;
+                position: relative;
+                overflow: hidden;
+                margin-top: -23px;
+                margin-bottom: 5px;"></div>
             </div>
-            <div class="col-sm-3 worker-auto">
-<ul class="labourUl">
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-    <li><img src="../../img/portfolio/dp.PNG" class="dpworker"/> <a class="lianchor">Samir ****</a> </li>
-</ul>
-              </div>
-          </div>
+            <div class="col-sm-12 table-wrapper clearfix">
+                <table class="table table-striped table-bordered clearfix">
+                    <thead style="background: #13b394;
+                    color: white;">
+                        <th width="40" class="text-center">
+                            Sr No
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                        <th>
+                            Labour Name
+                        </th>
+                        <th>
+                            Category
+                        </th>
+                        <th>
+                            Review
+                        </th>
+                        <th width="30" class="text-center">
+                            Action
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="../../img/portfolio/dp.PNG" class="dpworker" /></td>
+                            <td>Divaker Singh</td>
+                            <td>*******</td>
+                            <td>Real state</td>
+                            <td><a type="submit"  id="btn-login" class="btn btn-custom btn-lg btn-block reactBtn" >Book Now</a></td>
+                        </tr>
+                        <tr>
+                                <td>1</td>
+                                <td><img src="../../img/portfolio/dp.PNG" class="dpworker" /></td>
+                                <td>Divaker Singh</td>
+                                <td>*******</td>
+                                <td>Real state</td>
+                                <td><a type="submit" href="src/View/search.html" id="btn-login" class="btn btn-custom btn-lg btn-block reactBtn" >Book Now</a></td>
+                            </tr>
+                            <tr>
+                                    <td>1</td>
+                                    <td><img src="../../img/portfolio/dp.PNG" class="dpworker" /></td>
+                                    <td>Divaker Singh</td>
+                                    <td>*******</td>
+                                    <td>Real state</td>
+                                    <td><a type="submit" href="src/View/search.html" id="btn-login" class="btn btn-custom btn-lg btn-block reactBtn" >Book Now</a></td>
+                                </tr>
+                                <tr>
+                                        <td>1</td>
+                                        <td><img src="../../img/portfolio/dp.PNG" class="dpworker" /></td>
+                                        <td>Divaker Singh</td>
+                                        <td>*******</td>
+                                        <td>Real state</td>
+                                        <td><a type="submit" href="src/View/search.html" id="btn-login" class="btn btn-custom btn-lg btn-block reactBtn" >Book Now</a></td>
+                                    </tr>
+                    </tbody>
+                </table>
+                <ul class="labourUl" style="display:none;">
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                    <li>
+                        <img src="../../img/portfolio/dp.PNG" class="dpworker" />
+                        <a class="lianchor">Samir ****</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </div>
+</section>

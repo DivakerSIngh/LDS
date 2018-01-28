@@ -1,11 +1,8 @@
 ﻿mainApp.registerCtrl('searchCtrl', function SectorCtrl($scope, $rootScope, $http, $location, $cookies, appServices) {
 debugger
-$rootScope.pageClass = 'shown';
+
     $scope.init = function () {
-        debugger
-        setTimeout(() => {
-            $rootScope.pageClass = 'shown';
-        }, 600);
+       
         var latlng = new google.maps.LatLng(28.5355161,77.39102649999995);
         var map = new google.maps.Map(document.getElementById('map'), {
           center: latlng,

@@ -86,14 +86,16 @@ mainApp.run(function ($rootScope, $location, $cookies, $http, appServices) {
 
 function mainCtrl($scope, $location, $rootScope,notify, $cookies, $http, $timeout, appServices) {
     $rootScope._baseURL = "";
-    $rootScope.pageClass = 'page-home';
+    $rootScope.pageClass = 'hided';
     $rootScope._baseUrlServer = "";
     $rootScope.mUser = null;
     $rootScope.files = {};
     $rootScope.attParam = null;
-
     $scope.addToken = function (str) { return { Search: str, Token: $rootScope.token }; }
-
+    $timeout(function () {
+        
+        $rootScope.pageClass = 'shown';
+    }, 150);
     $rootScope.setMsg = function (msg, succ) {
         debugger
         notify.closeAll();
@@ -109,20 +111,21 @@ function mainCtrl($scope, $location, $rootScope,notify, $cookies, $http, $timeou
 
 
     $rootScope.logOut = function () {
-        // $rootScope.mUser = null;
-        // $rootScope.token = null;
-        // $rootScope.examMode = false;
-        // $cookies.remove('userAuthToken');
-        // $cookies.remove('examMode');
-        // $http.defaults.headers.common['Auth-Token'] = $rootScope.token;
-        // $location.path("/signIn");
+        $rootScope.token = null;
+        $cookies.remove('userAuthToken');
+        $http.defaults.headers.common['Auth-Token'] = $rootScope.token;
+        $location.path("/home");
     };
     $scope.getClass = function (path) {
         return ($location.path().substr(0, path.length) === path) ? 'activeMenu' : '';
       }
     $rootScope.goToLocation = function (path) {
-        
+        $rootScope.pageClass = 'hided';
         $location.path(path);
+        $timeout(function () {
+            $rootScope.pageClass = 'shown';
+        }, 150);
+       
     };
 
     $rootScope.goErrPage = function (aErr) {
