@@ -97,7 +97,7 @@ function mainCtrl($scope, $location, $rootScope,notify, $cookies, $http, $timeou
         $rootScope.pageClass = 'shown';
     }, 150);
     $rootScope.setMsg = function (msg, succ) {
-        debugger
+        
         notify.closeAll();
        notify({ message: msg, classes: (succ ? "alert-success" : "alert-danger"), duration: 50000000 });
     }

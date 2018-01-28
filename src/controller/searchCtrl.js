@@ -1,5 +1,5 @@
 ﻿mainApp.registerCtrl('searchCtrl', function SectorCtrl($scope, $rootScope, $http, $location, $cookies, appServices) {
-debugger
+
 
     $scope.init = function () {
        
